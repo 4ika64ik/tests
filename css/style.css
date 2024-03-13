@@ -949,28 +949,7 @@ footer a:hover {
     height: 43px;
   }
 
-  .social-item {
-    display: flex;
-    align-items: center;
-  }
-  .social-item a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 30px;
-  }
-  .social-item:first-child {
-    width: 5px;
-  }
-  .social-item:nth-child(2) {
-    width: 13px;
-  }
-  .social-item:nth-child(3) {
-    width: 12px;
-  }
-  .social-item:last-child {
-    width: 13px;
-  }
+  
 
   .search-btn {
     max-width: 24px;
@@ -1144,4 +1123,91 @@ footer a:hover {
   display: block;
   transform: scale(1);
   animation: emoji-appear 0.5s linear forwards;
+}/* Добавлено */
+/* Общие стили для мобильных устройств */
+@media screen and (max-width: 767px) {
+  /* Общие стили */
+  body {
+    font-size: 16px; /* Увеличиваем размер шрифта */
+  }
+
+  .header-logo {
+    max-width: 100px; /* Уменьшаем размер логотипа */
+  }
+
+  .header-bottom, .header-top {
+    padding: 10px; /* Уменьшаем отступы в шапке */
+  }
+
+  /* Навигация */
+  .nav {
+    display: none; /* Скрываем основное меню */
+  }
+
+  .mobile-menu {
+    display: flex; /* Отображаем мобильное меню */
+  }
+
+  .social {
+    width: auto; /* Адаптивная ширина блока соцсетей */
+  }
+
+  .search-btn {
+    display: none; /* Скрываем кнопку поиска (не подходит для мобильных) */
+  }
+
+  /* Содержимое */
+  .article {
+    padding: 20px; /* Уменьшаем отступы вокруг контента */
+    margin-bottom: 30px; /* Увеличиваем отступ после статьи */
+  }
+
+  .article__title {
+    font-size: 24px; /* Увеличиваем размер заголовка статьи */
+  }
+
+  .article__author {
+    font-size: 14px; /* Уменьшаем размер информации об авторе */
+    margin-top: 10px; /* Увеличиваем отступ сверху */
+  }
+
+  .quote__symbol {
+    font-size: 48px; /* Уменьшаем размер кавычек */
+    margin-right: 10px; /* Увеличиваем отступ между кавычками и текстом */
+  }
+
+  .features-wrapper {
+    padding: 20px; /* Уменьшаем отступы у списка особенностей */
+    margin-bottom: 20px; /* Увеличиваем отступ после списка особенностей */
+  }
+
+  .wheel-wrapper {
+    margin-bottom: 20px; /* Увеличиваем отступ после "колеса" */
+  }
+
+  .offer-date {
+    font-size: 14px; /* Уменьшаем размер текста даты предложения */
+  }
+
+  .comments {
+    margin-bottom: 60px; /* Увеличиваем отступ после комментариев */
+  }
+
+  .comments__title {
+    font-size: 16px; /* Уменьшаем размер заголовка комментариев */
+    margin-bottom: 20px; /* Увеличиваем отступ после заголовка комментариев */
+  }
+
+  .sidebar {
+    margin: 0; /* Убираем отступы у боковой панели */
+    max-width: none; /* Отменяем максимальную ширину */
+    width: 100%; /* Занимаем всю доступную ширину */
+  }
+
+  /* Элементы боковой панели */
+  .categories, .posts, .about, .recommend, .tags, .follow {
+    margin-left: 0; /* Убираем отступы слева */
+    padding: 20px; /* Увеличиваем отступы внутри блоков */
+    margin-bottom: 30px; /* Увеличиваем отступ снизу */
+  }
 }
