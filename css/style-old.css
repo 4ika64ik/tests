@@ -283,17 +283,7 @@
     transition-timing-function: ease-in-out
 }
 
-@-webkit-keyframes super-rotation {
-    70% {
-        -webkit-transform: rotate(1783deg);
-        transform: rotate(1783deg)
-    }
 
-    100% {
-        -webkit-transform: rotate(1774deg);
-        transform: rotate(1774deg)
-    }
-}
 
 @keyframes super-rotation {
     70% {
@@ -305,10 +295,7 @@
         transform: rotate(983deg)
     }
 
-    100% {
-        -webkit-transform: rotate(1274deg);
-        transform: rotate(1274deg)
-    }
+   
 }
 
 @media all and (max-width: 460px) {

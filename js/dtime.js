@@ -1,31 +1,46 @@
 function dtime_me(d, like_eu) {
     var now = new Date();
-    now.setDate(now.getDate() + d + 1); // Add the specified number of days
-  
-    var dayNum = (now.getDate() < 10) ? '0' + now.getDate() : now.getDate(); // Add leading zero if needed
-    var monthNum = (now.getMonth() + 1 < 10) ? '0' + (now.getMonth() + 1) : (now.getMonth() + 1); // Add leading zero if needed
-  
-    var formattedDate;
-    if (like_eu === true) {
-      formattedDate = dayNum + "/" + monthNum + "/" + now.getFullYear();
-    } else {
-      formattedDate = monthNum + "/" + dayNum + "/" + now.getFullYear();
+    now.setDate(now.getDate() + d + 1);
+
+    var dayNum = '';
+    if (now.getDate() < 10) {
+        dayNum = '0';
     }
-  
-    // Return the formatted date instead of using document.write
-    return formattedDate;
-  }
-  
-  function dtime_mt(d) {
+    dayNum += now.getDate();
+
+    var monthNum = '';
+    if (now.getMonth() + 1 < 10) {
+        monthNum = '0';
+    }
+    monthNum += now.getMonth() + 1;
+
+    if (like_eu === true) {
+        document.write(dayNum + "/" + monthNum + "/" + now.getFullYear());
+    } else {
+        document.write(monthNum + "/" + dayNum + "/" + now.getFullYear());
+    }
+
+}
+
+
+months_localized = {
+    'en': ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+}
+
+days_localized = {
+    'en': ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+}
+
+function dtime_mt(d) {
     var now = new Date();
-    now.setDate(now.getDate() + d + 1); // Add the specified number of days
-  
-    var dayNum = (now.getDate() < 10) ? '0' + now.getDate() : now.getDate(); // Add leading zero if needed
-    var monthName = months_localized['en'][now.getMonth()]; // Use month name from localization
-  
-    var formattedDate = dayNum + ", " + monthName + " " + now.getFullYear();
-  
-    // Return the formatted date instead of using document.write
-    return formattedDate;
-  }
-  
+    now.setDate(now.getDate() + d + 1);
+    document.write((now.getDate()) + ", " + " " + months_localized['en'][now.getMonth()] + " " + now.getFullYear());
+}
+
+
+
+
+
+
+
+
