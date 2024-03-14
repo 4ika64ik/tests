@@ -272,37 +272,22 @@
 }
 
 .super-rotation {
-    -webkit-animation-name: super-rotation;
-    animation-name: super-rotation;
-    -webkit-animation-duration: 7s;
-    animation-duration: 7s;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-    -webkit-transition-timing-function: ease-in-out;
-    -o-transition-timing-function: ease-in-out;
-    transition-timing-function: ease-in-out
+    -webkit-animation: super-rotation 7s forwards ease-in-out;
+    animation: super-rotation 7s forwards ease-in-out;
 }
-
-
 
 @keyframes super-rotation {
-    70% {
-        -webkit-transform: rotate(1783deg);
-        transform: rotate(1783deg)
+    from {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
     }
-    80% {
-        -webkit-transform: rotate(983deg);
-        transform: rotate(983deg)
-    }
-
-   
-}
-
-@media all and (max-width: 460px) {
-    .wheel {
-        width: 300px
+    to {
+        -webkit-transform: rotate(720deg);
+        transform: rotate(710deg);
     }
 }
+
+
 
 
 

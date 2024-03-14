@@ -10,7 +10,7 @@ $(function () {
             // Устанавливаем таймер для отображения результата
             setTimeout(function () {
                 resultWrapper.style.display = "block";
-            }, 8000);
+            }, 7000);
             // Устанавливаем таймер для отображения блока заказа
             setTimeout(function () {
                 $('.spin-wrapper').slideUp();
